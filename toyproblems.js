@@ -9,10 +9,27 @@
 //
 // Patrick Feeney => P.F
 
+function namers(a) {
+
+    const splitname = a.split(' ');
+    const initials = splitname[0].charAt(0) + '.' + splitname[1].charAt(0);    
+    return initials; 
+    
+}
+
 ///////////////////////////////////////////////////////
 
 // 2
 // Write function makeUpperCase.
+
+function upperCase(a) {
+
+    const split = a.split(' ');
+    // let letter = split[0].charAt(0);
+    const upper = split.map(letter => {return letter.toUpperCase()});
+    console.log(upper.join(' '))
+    return upper.join(' ')
+}
 
 //////////////////////////////////////////////////////
 
@@ -24,6 +41,17 @@
 // Your task is to write a function that takes a String and returns an Array/list with the length of each word added to each element .
 
 // Note: String will have at least one element; words will always be separated by a space.
+
+function addLength(a) {
+
+    const split = a.split(' ');
+    // console.log(  split[0] + " " + split[0].length + "," + split[1] + " " + split[1].length );
+    const result = split[0] + " " + split[0].length + ", " + split[1] + " " + split[1].length;
+    result.toString();
+    console.log(result)
+    return result; 
+    
+}
 
 ///////////////////////////////////////////////////////
 //4
