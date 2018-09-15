@@ -79,6 +79,12 @@ function _if(a, cb, cb2) {
 //
 // Write function typeValidation that will accept two parameters: variable and type and check if type of variable is matching type. Return true if types match or false if not.
 
+function typeValidation(variable,type) {
+    if (typeof variable === type) {
+        return true;
+    } else return false
+}
+
 ///////////////////////////////////////////////////////
 //6
 // #Triple Trouble
@@ -89,9 +95,26 @@ function _if(a, cb, cb2) {
 //
 // Note: You can expect all of the inputs to be the same length.
 
+function orderInTheForce(a, b, c) {
+    let newString = '';
+    a.split('');
+    b.split('');
+    c.split('');
+    for(var i = 0; i < a.length;i++) {
+        newString += a[i] + b[i] + c[i];
+    }
+    console.log(newString)
+    return newString;
+}
+
 ///////////////////////////////////////////////////////
 //7
 //Given a non-negative integer n, write a function toBinary/ToBinary which returns that number in a binary format.
+
+const toBinary = (num) => {
+    return num.toString(2)
+}
+console.log(toBinary(45))
 
 ///////////////////////////////////////////////////////
 //8
