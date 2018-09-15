@@ -45,19 +45,29 @@ function upperCase(a) {
 function addLength(a) {
 
     const split = a.split(' ');
+    console.log(split)
     // console.log(  split[0] + " " + split[0].length + "," + split[1] + " " + split[1].length );
-    const result = split[0] + " " + split[0].length + ", " + split[1] + " " + split[1].length;
-    result.toString();
-    console.log(result)
-    return result; 
+    // const result = split[0] + " " + split[0].length + ", " + split[1] + " " + split[1].length; Does not work with results with more than two indexes long
+    const numbers = split.map(number => number.length);
+    const arr = [];  
+    for (var i = 0; i < split.length; i++){
+        arr.push(split[i]+ ' ' + numbers[i])
+    }
+    console.log(arr)
+    return arr.join(' ')
     
 }
 
 ///////////////////////////////////////////////////////
 //4
-// Who likes keywords? Nobody likes keywords, so why use them?
-//
-// You know what keyword I use too much? if! We should make a function called _if, with its arguments as a logical test and two functions/lambdas where the first function is executed if the boolean is true, and the second if it's false, like an if/else statement, so that we don't have to mess around with those nasty keywords! Even so, It should support truthy/falsy types just like the keyword.
+// Who likes keywords? Nobody likes keywords, so why use them? You know what keyword I use too much? if! We should make a function called _if, with its arguments as a logical test and two functions/lambdas where the first function is executed if the boolean is true, and the second if it's false, like an if/else statement, so that we don't have to mess around with those nasty keywords! Even so, It should support truthy/falsy types just like the keyword.
+
+function _if(a, cb, cb2) {
+    if (a) {
+        return cb
+    } else return cb2
+}
+
 
 ///////////////////////////////////////////////////////
 //5
